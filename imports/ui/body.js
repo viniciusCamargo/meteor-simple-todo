@@ -12,6 +12,11 @@ Template.body.onCreated(function bodyOnCreated() {
 });
 
 Template.body.helpers({
+  // tasks: [
+  //   { text: 'Vinicius 1' },
+  //   { text: 'Vinicius 2' },
+  //   { text: 'Vinicius 3' },
+  // ],
   tasks() {
     const instance = Template.instance();
     if (instance.state.get('hideCompleted')) {
@@ -35,13 +40,15 @@ Template.body.events({
     const target = event.target;
     const text = target.text.value;
 
-    Tasks.insert({
-      text,
-      createdAt: new Date(),
-      owner: Meteor.userId(),
-      username: Meteor.user().username,
-      checked: false
-    });
+    // Tasks.insert({
+    //   text,
+    //   createdAt: new Date(),
+    //   owner: Meteor.userId(),
+    //   username: Meteor.user().username,
+    //   checked: false
+    // });
+
+    Meteor.call('tasks.insert', text);
 
     target.text.value = '';
   },
