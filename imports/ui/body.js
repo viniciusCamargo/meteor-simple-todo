@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 
 import { Tasks } from '../api/tasks.js';
 
+import './task.js';
 import './body.html';
 
 Template.body.helpers({
@@ -22,7 +23,8 @@ Template.body.events({
 
     Tasks.insert({
       text,
-      createdAt: new Date()
+      createdAt: new Date(),
+      checked: false
     });
 
     target.text.value = '';
