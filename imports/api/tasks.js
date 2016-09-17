@@ -9,7 +9,7 @@ Meteor.methods({
     check(text, String);
 
     if (! this.userId) {
-      throw new Meteor.Error('not-authorized').
+      throw new Meteor.Error('not-authorized');
     }
 
     Tasks.insert({
