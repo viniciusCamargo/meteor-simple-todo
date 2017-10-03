@@ -3,3 +3,6 @@ In order to run the code in this repository you have to:
 - Run Meteor inside the project's directory: `$ meteor`
 
 Please, keep in mind that it was written for education purposes. It is **not** intended to be put in production, it has security issues that need to be taken care.
+
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/viniciusCamargo/meteor-simple-todo.svg)](https://greenkeeper.io/)
